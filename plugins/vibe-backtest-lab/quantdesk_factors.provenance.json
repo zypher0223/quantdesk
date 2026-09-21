@@ -1,0 +1,7 @@
+{
+  "origin": "plugins/vibe-factors/plugin.py",
+  "sha256": "e9a7adf857adb9c8393b0ee9d39b29fe05dddc8fbcdd20b8eb38f60664d50b6c",
+  "bytes": 54334,
+  "generatedAt": "2026-09-15T18:02:18Z",
+  "note": "本文件是 plugins/vibe-factors/plugin.py 的逐字节副本，由 tools/vendor_quantdesk_factors.py 生成，请勿直接编辑。改因子实现请改源文件后重新生成本副本；测试会比对 sha256，两边不一致会直接失败。"
+}

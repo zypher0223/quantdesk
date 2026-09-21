@@ -1,0 +1,15 @@
+[plugin]
+id = "fincept-analytics"
+name = "Fincept Portfolio Analytics"
+version = "0.1.0"
+api_version = "2"
+description = "通过 Fincept 官方 REST API 计算组合风险（VaR/CVaR/波动率/相关性/风险贡献）、组合优化与压力测试；不使用其仓库代码，也不具备下单能力。"
+homepage = "https://fincept.in"
+capabilities = ["analytics"]
+command = ["python", "plugin.py"]
+timeout_seconds = 90
+
+[plugin.permissions]
+network = true
+env = []
+optional_env = ["FINCEPT_API_URL", "FINCEPT_API_KEY"]

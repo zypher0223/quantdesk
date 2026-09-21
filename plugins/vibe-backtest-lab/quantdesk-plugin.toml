@@ -1,0 +1,17 @@
+[plugin]
+id = "vibe-backtest-lab"
+name = "Vibe Alpha Zoo"
+version = "0.2.0"
+api_version = "4"
+description = "唯一启用的因子提供者 + 确定性搜索代理（strategy_agent，v4 协议），同时供给两族因子：Vibe-Trading 0.1.15 Alpha Zoo 里筛出的 210 个单标的日频价量因子（逐字取自上游 MIT 源码，factor_allowlist.json 记录每个模块的 sha256），以及 QuantDesk 自研的 28 个 15m/1h/4h/1d 时序因子（实现是 plugins/vibe-factors/plugin.py 的逐字节副本）。插件不联网、不取行情、不下单、不计算收益，依赖装在自己的独立虚拟环境里。"
+homepage = "https://github.com/HKUDS/Vibe-Trading"
+capabilities = ["factor_provider", "strategy_agent"]
+command = ["python", "plugin.py"]
+timeout_seconds = 120
+
+[plugin.permissions]
+network = false
+env = []
+
+[plugin.dependencies]
+requirements = "requirements.lock"

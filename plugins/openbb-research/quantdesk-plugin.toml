@@ -1,0 +1,26 @@
+[plugin]
+id = "openbb-research"
+name = "OpenBB Research Provider"
+version = "0.1.0"
+api_version = "1"
+description = "通过 OpenBB（独立运行环境或 REST）采集基本面、新闻、财报、宏观与美股参考数据，输出带发布时间的标准化证据。"
+homepage = "https://github.com/OpenBB-finance/OpenBB"
+capabilities = ["research_tool"]
+command = ["python", "plugin.py"]
+timeout_seconds = 60
+
+[plugin.permissions]
+network = true
+env = []
+# 各 Provider 的密钥按需提供：只用 yfinance 时不需要任何密钥，缺哪个就少哪个来源，
+# 由适配器报告"该 Provider 不可用"，而不是让插件无法启用。
+optional_env = [
+  "OPENBB_FRED_API_KEY",
+  "OPENBB_FMP_API_KEY",
+  "OPENBB_BENZINGA_API_KEY",
+  "OPENBB_POLYGON_API_KEY",
+  "OPENBB_API_URL",
+]
+
+# OpenBB 的平台依赖不安装进 QuantDesk 主引擎虚拟环境。这里只声明量化行情不需要的
+# 可执行文件检查；实际运行环境由运维在其独立 venv 中准备（见 README）。

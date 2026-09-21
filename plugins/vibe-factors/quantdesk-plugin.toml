@@ -1,0 +1,14 @@
+[plugin]
+id = "vibe-factors"
+name = "Vibe Time-Series Factors"
+version = "0.2.0"
+api_version = "3"
+description = "统计验证器（移动分块 bootstrap、信号随机化 p 值、Deflated Sharpe、PBO/CSCV）。纯标准库运行，不联网，不下单，也不重算 QuantDesk 的盈亏。因子计算能力已交给 vibe-backtest-lab（同一个能力只能有一个启用的提供者）；本文件里的 28 个因子实现保留为那个插件的构建来源，由 quantdesk_factors.py 逐字节复制过去。"
+homepage = "https://github.com/quantdesk"
+capabilities = ["backtest_validator"]
+command = ["python", "plugin.py"]
+timeout_seconds = 120
+
+[plugin.permissions]
+network = false
+env = []

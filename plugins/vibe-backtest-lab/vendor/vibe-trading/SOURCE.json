@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/HKUDS/Vibe-Trading",
+  "package": "vibe-trading-ai",
+  "tag": "v0.1.15",
+  "commit": "cc54832cb50de29d14bb10097b18e08f0a843650",
+  "commitDate": "2026-09-09T15:47:15+08:00",
+  "license": "MIT",
+  "vendoredPaths": [
+    "LICENSE",
+    "NOTICE",
+    "src/__init__.py",
+    "src/factors/__init__.py",
+    "src/factors/_backend.py",
+    "src/factors/base.py",
+    "src/factors/zoo/__init__.py",
+    "src/factors/zoo/academic",
+    "src/factors/zoo/alpha101",
+    "src/factors/zoo/fundamental",
+    "src/factors/zoo/gtja191",
+    "src/factors/zoo/qlib158"
+  ],
+  "vendoredFileCount": 481,
+  "shimFiles": [
+    "src/config/__init__.py",
+    "src/config/accessor.py"
+  ],
+  "upstreamRequirementsLockSha256": "d0d041364e5a6e00bb228f37514ccfd03c00256b2a142c88c77a20a962d9bcd6",
+  "upstreamManifestSha256": "3853b6bbf08e672ce6abedc09cd73d65f3ef4e0024645bc4d06209d4c5e27a91",
+  "note": "MIT 许可下的上游源码副本，逐字复制未做修改；每个 zoo 目录自带 LICENSE.md/NOTICE。固定在此提交，升级必须重新运行 tools/vendor_zoo.py 并复查 factor_allowlist.json 的差异。shimFiles 是 QuantDesk 写的适配垫片（非上游代码），用来替掉对 Vibe 设置树的依赖，并固定走 numpy 回退路径以保证跨主机数值一致。"
+}

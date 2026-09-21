@@ -1,0 +1,20 @@
+[plugin]
+id = "example-strategy"
+name = "Example Strategy Adapter"
+version = "0.1.0"
+api_version = "1"
+description = "可运行模板：策略目录、参数和批量信号生成。"
+homepage = "https://github.com/example/example-strategy"
+capabilities = ["strategy"]
+command = ["python", "plugin.py"]
+timeout_seconds = 10
+
+[plugin.permissions]
+network = false
+env = []
+
+# 只有确有第三方依赖时才启用。锁文件中的每个包必须使用 == 固定版本，
+# 并提供完整的 --hash=sha256；QuantDesk 只安装 wheel。
+# [plugin.dependencies]
+# requirements = "requirements.lock"
+# executables = ["ffmpeg"]  # 只检查，不会自动安装系统命令

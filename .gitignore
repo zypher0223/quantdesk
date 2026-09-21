@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / web build output
+node_modules/
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Local data & secrets
+*.db
+*.db-wal
+*.db-shm
+keys.env
+.env
+.env.local
+uploads/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.tmp/
+.impeccable/
